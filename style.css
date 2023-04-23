@@ -1,0 +1,187 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    background-image: url('https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding: 20px;
+    background-attachment: fixed;
+}
+
+.header::after {
+    content: "";
+    background: #0c3632;
+    position: absolute;
+    opacity: .85;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease;
+}
+
+.nav {
+    width: calc(100% - 40px);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.logo-container {
+    line-height: 1.5;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    padding: 0 10px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-list li:last-of-type {
+    padding-right: 0;
+}
+
+
+.nav-list-link {
+    position: relative;
+    transition: all .25s ease;
+}
+
+.nav-list-link:hover {
+    color: #17baaa;
+}
+.nav-list-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: aqua;
+    bottom: -8px;
+    left: 0;
+    transition: all .25s ease;
+    transform: scale(0);
+}
+
+.nav-list-link:hover::after {
+    transform: scale(1);
+}
+ 
+.nav-list li:last-of-type a{
+    font-size: 12px;
+    border-radius: 3px;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 10px;
+    background-color: brown;
+    transition: all .25s ease;
+}
+
+.nav-list li:last-of-type a:hover {
+  background-color: blanchedalmond;
+}
+
+.button-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.nav-toggle {
+    font-size: 2rem; 
+    color: #fff;
+}
+
+
+.burger-icon {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+}
+
+.header-content {
+    margin: auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content-title {
+    color: white;
+    font-size: 56px;
+    line-height: 84px;
+}
+
+.header-content-title-green {
+    color: #61d9cd;
+}
+
+.header-content-btn {
+    display: block;
+    background: #17baaa;
+    color: #fff;
+    align-items: center;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40px;
+    outline: none;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.header-content-btn:hover {
+    background: #129185;
+}
+@media screen and (min-width: 992px) {
+    .nav-toggle {
+        display: none; 
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-list {
+        display: none; 
+    }
+    .nav-toggle {
+        display: block;
+    }
+}
